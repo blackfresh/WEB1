@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            border: 5px solid green;
+            font-size: 60px;
+        }
+        /*웹의 폭이 800픽셀 이하로 작아지면 div 디스플레이를 하지않게*/
+        @media(min-width:800px) {
+        div{
+            display:none;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div>
+    responsive
+    </div>
+</body>
+</html>

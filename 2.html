@@ -5,26 +5,46 @@
 <meta charset="utf-8"><!--uft-8이라는 방식으로 저장됬다는뜻 한글은 ufu-8설정을 해줘야함 -->
 <style>
     a {
-        color: black;
+        color:#000000;
         text-decoration: none;
+    }
+    h1 {
+        font-size: 50px;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        margin: 0px;
+        padding: 20px;
+    }
+    ol{
+        border-right: 1px solid gray;
+        width: 76px;
+        margin: 0px;
+        padding: 20px;
+        padding-left: 56px;
+    }
+    #grid{
+        display: grid;
+        grid-template-columns: 150px 1fr;
+    }
+    #article{
+        padding-left: 20px;
+    }
+    @media(max-width:550px){
+        #grid{
+            display: block;
+        }
     }
 </style>
 </head>
 <body>
     <h1><a href="index.html">WEB</h1></a>
+<div id="grid">
     <ol>
         <li><a href="1.html">HTML</li></a>
         <li><a href="2.html">CSS</li></a>
         <li><a href="3.html">Javascript</li></a>
     </ol>
-    <!--
-    <h1><a href="index.html"><font color="red">WEB</font></h1></a>
-<ol>
-    <li><a href="1.html"><font color="red">HTML</font></li></a>
-    <li><a href="2.html"><font color="red">CSS</font></li></a>
-    <li><a href="3.html"><font color="red">Javascript</font></li></a>
-</ol>
--->
+    <div id="article">
 <h2>CSS</h2>
 <p>
 <strong>style</strong>속성은 모든 셀렉터에 색깔을 입힌다<br>
@@ -40,6 +60,21 @@ style<br>
 <strong>font-size</strong>폰트의 사이즈 변경<br>
 <strong>.class</strong>셀렉터는 입력한 class에만 영향을 줌<br>
 <strong>#id</strong>셀렉터는 특정 id값에만 영향을줌<br>
-</p><img src="2.jpg" width="50%">
+<strong>display</strong>열 전체를 사용하는것을 block level element(block) 부분만을 사용하는것을 inline elemnet(inline) 사라지게할떈 none<br>
+셀렉터를 ,로 두개 지정가능 ex)a, h1   중복되는선언은 묶어서 가능<br>
+ex)border-width:5px; boreder-color:red; border-style:solid;를<br>
+border:5px solid red로 묶어서 가능<br>
+<strong>padding</strong>border의 안쪽 간격<br>
+<strong>margin</strong>border의 바깥쪽 간격<br>
+<strong>div</strong>block elemnet의 형식이지만 디자인을 위해 사용됨<br>
+<strong>span</strong>inline elemnet의 형식이지만 디자인을 위해 사용됨<br>
+<strong>display: grid</strong>웹 디자인의 레이아웃 display:gird 선언으로 사용<br>
+<strong>#grid ol</strong>처럼 id선언 아래에 태그선언으로 해당 id아래의 태그들만 적용가능<br>
+<strong>@media(min-width:800px)</strong>미디어 쿼리 반응형웹 스타일
+<strong>min-width:800px</strong>화면의 가로사이즈가 800픽셀이하로 작아지면<br>
+<strong>max-width:800px</strong>화면의 가로사이즈가 800픽셀이상 커지면<br>
+</p>
+    </div>
+</div>
 </body>
 </html>
